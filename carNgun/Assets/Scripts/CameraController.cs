@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    public float rotateSpeed = 10.0f, speed = 10.0f;
+    public float rotateSpeed = 10.0f, speed = 10.0f, zoomSpped = 10.0f;
     private float _mult = 1f;
 
     private void Update()
@@ -24,5 +24,7 @@ public class CameraController : MonoBehaviour
         
         transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime * rotate * _mult, Space.World);
         transform.Translate(new Vector3(hor, 0, ver) * Time.deltaTime * _mult * speed, Space.Self);
+
+        transform.position += transform.up * zoomSpped * Time.deltaTime * Input.GetAxis("Mouse ScrollWheel");
     }
 }
