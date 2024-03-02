@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    public float rotateSpeed = 10.0f, speed = 10.0f, zoomSpped = 10.0f;
+    public float rotateSpeed = 25.0f, speed = 25.0f, zoomSpped = 500.0f;
     private float _mult = 1f;
 
     private void Update()
@@ -26,5 +26,10 @@ public class CameraController : MonoBehaviour
         transform.Translate(new Vector3(hor, 0, ver) * Time.deltaTime * _mult * speed, Space.Self);
 
         transform.position += transform.up * zoomSpped * Time.deltaTime * Input.GetAxis("Mouse ScrollWheel");
+
+        transform.position = new Vector3(
+            transform.position.x,
+            Mathf.Clamp(transform.position.y, -20f, 30f),
+            transform.position.z);
     }
 }
