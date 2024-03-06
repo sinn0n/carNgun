@@ -19,7 +19,7 @@ public class PlaceObjects : MonoBehaviour
     {
         PositionObject();
        
-       if(Input.GetMouseButtonDown(0))
+       if(Input.GetMouseButtonDown(1))
            Destroy(gameObject.GetComponent<PlaceObjects>());
        
        if(Input.GetKey(KeyCode.LeftShift))
