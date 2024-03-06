@@ -345,6 +345,7 @@
 "Assets/Scripts/AutocarCreate.cs"
 "Assets/Scripts/ButtonPlaceBuild.cs"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/GenerateEnemy.cs"
 "Assets/Scripts/PlaceObjects.cs"
 "Assets/Scripts/Rain.cs"
 "Assets/Scripts/SelectController.cs"
